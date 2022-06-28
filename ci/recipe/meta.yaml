@@ -2,7 +2,7 @@
 {% set version = data.get('version') or 'placehold' %}
 
 package:
-  name: q2-plugin-name
+  name: q2-checkm
   version: {{ version }}
 
 source:
@@ -22,14 +22,15 @@ requirements:
 
 test:
   requires:
-    - pytest
-    - qiime2 >={{ qiime2 }}
-
+    - coverage
+    - pytest-cov
   imports:
-    - q2_plugin_name
-    - qiime2.plugins.plugin_name
+    - q2_checkm
+    - qiime2.plugins.checkm
+  commands:
+    - pytest --cov q2_checkm --pyargs q2_checkm
 
 about:
-  home: https://github.com/bokulich-lab/q2-plugin-name
+  home: https://github.com/bokulich-lab/q2-checkm
   license: BSD-3-Clause
   license_family: BSD

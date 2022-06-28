@@ -3,12 +3,13 @@ branch = True
 omit =
     */tests*
     */__init__.py
-    q2_plugin_name/_version.py
+    q2_checkm/_version.py
     versioneer.py
 
 [report]
+fail_under = 90
 omit =
     */tests*
     */__init__.py
-    q2_plugin_name/_version.py
+    q2_checkm/_version.py
     versioneer.py
