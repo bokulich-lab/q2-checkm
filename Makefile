@@ -12,7 +12,8 @@ test: all
 	py.test
 
 test-cov: all
-	py.test --cov=q2_checkm
+	coverage run -m pytest
+	coverage xml
 
 install: all
 	bash install-pplacer.sh

@@ -10,16 +10,13 @@ import unittest
 import altair as alt
 import pandas as pd
 from altair import Color, FilterTransform, MarkDef, Scale, Tooltip, Undefined, X, Y
-from q2_moshpit.checkm.plots import (
-    _prep_bar_plot,
-    _prep_contig_plots,
-    _prep_scatter_plot,
-)
 from qiime2.plugin.testing import TestPluginBase
+
+from q2_checkm.plots import _prep_bar_plot, _prep_contig_plots, _prep_scatter_plot
 
 
 class TestCheckMPlots(TestPluginBase):
-    package = "q2_moshpit.checkm.tests"
+    package = "q2_checkm.tests"
 
     def setUp(self):
         super().setUp()
