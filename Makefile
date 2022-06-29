@@ -15,10 +15,13 @@ test-cov: all
 	py.test --cov=q2_checkm
 
 install: all
+	bash install-pplacer.sh
+	pip install git+https://github.com/Ecogenomics/CheckM.git@1343a1c75d8e083af435f6a21bb42188a7ea6972
 	$(PYTHON) setup.py install
 
 dev: all
-	pip install pre-commit
+	bash install-pplacer.sh
+	pip install pre-commit pip install git+https://github.com/Ecogenomics/CheckM.git@1343a1c75d8e083af435f6a21bb42188a7ea6972
 	pip install -e .
 	pre-commit install
 

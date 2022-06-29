@@ -15,8 +15,13 @@ requirements:
   host:
     - python {{ python }}
     - setuptools
-
   run:
+    - altair
+    - hmmer
+    - matplotlib
+    - numpy
+    - prodigal
+    - pysam
     - python {{ python }}
     - qiime2 {{ qiime2_epoch }}.*
 

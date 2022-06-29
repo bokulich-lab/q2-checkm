@@ -5,11 +5,3 @@
 #
 # The full license is in the file LICENSE, distributed with this software.
 # ----------------------------------------------------------------------------
-
-from ._version import get_versions
-from .checkm import evaluate_bins
-
-__version__ = get_versions()["version"]
-del get_versions
-
-__all__ = ["evaluate_bins"]
