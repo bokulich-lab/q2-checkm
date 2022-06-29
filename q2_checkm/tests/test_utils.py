@@ -26,7 +26,7 @@ def fake_processing_func(key, val):
 
 
 class TestCheckMUtils(TestPluginBase):
-    package = "q2_moshpit.checkm.tests"
+    package = "q2_checkm.tests"
 
     def test_process_common_inputs_bools(self):
         kwargs = {"arg1": False, "arg2": True}
