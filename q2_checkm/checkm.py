@@ -27,7 +27,7 @@ from q2_checkm.utils import (
     run_command,
 )
 
-TEMPLATES = pkg_resources.resource_filename("q2_moshpit", "assets")
+TEMPLATES = pkg_resources.resource_filename("q2_checkm", "assets")
 
 
 def _evaluate_bins(
