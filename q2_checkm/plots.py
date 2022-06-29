@@ -155,7 +155,7 @@ def _draw_overview_plots(df: pd.DataFrame) -> dict:  # pragma: no cover
             base,
             sample_selection,
             x_col="sample_id",
-            y_col="count(bin_id):Q",
+            y_col="distinct(bin_id):Q",
             x_title="Sample ID",
             y_title="Bin count",
             color_shorthand="qc_category:N",
