@@ -9,7 +9,9 @@ source:
   path: ../..
 
 build:
-  script: make install
+  script: |
+    make VERBOSE=1
+    make install
 
 requirements:
   host:
