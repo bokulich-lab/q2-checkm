@@ -25,7 +25,6 @@ setup(
         "q2_checkm": [
             "citations.bib",
             "assets/checkm/*",
-            "assets/checkm/vega/*/*",
             "assets/checkm/data/*",
             "assets/checkm/js/*",
             "assets/checkm/css/*",
