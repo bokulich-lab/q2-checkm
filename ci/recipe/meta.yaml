@@ -9,16 +9,25 @@ source:
   path: ../..
 
 build:
-  script: make install
+  script: |
+    make VERBOSE=1
+    make install
 
 requirements:
   host:
     - python {{ python }}
     - setuptools
-
   run:
+    - altair
+    - hmmer
+    - matplotlib
+    - numpy
+    - prodigal
+    - pysam
     - python {{ python }}
     - qiime2 {{ qiime2_epoch }}.*
+    - q2-types-genomics {{ qiime2_epoch }}.*
+    - q2templates {{ qiime2_epoch }}.*
 
 test:
   requires:

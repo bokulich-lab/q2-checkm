@@ -12,13 +12,17 @@ test: all
 	py.test
 
 test-cov: all
-	py.test --cov=q2_checkm
+	coverage run -m pytest
+	coverage xml
 
 install: all
+	bash install-pplacer.sh
+	pip install git+https://github.com/misialq/CheckM.git@29916b666ba8834d0191d631110ffbdf4494cac9
 	$(PYTHON) setup.py install
 
 dev: all
-	pip install pre-commit
+	bash install-pplacer.sh
+	pip install pre-commit pip install git+https://github.com/misialq/CheckM.git@29916b666ba8834d0191d631110ffbdf4494cac9
 	pip install -e .
 	pre-commit install
 
