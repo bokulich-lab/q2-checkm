@@ -17,12 +17,12 @@ test-cov: all
 
 install: all
 	bash install-pplacer.sh
-	pip install git+https://github.com/misialq/CheckM.git@29916b666ba8834d0191d631110ffbdf4494cac9
+	pip install git+https://github.com/Ecogenomics/CheckM.git@8b42a8ca13dda3a967e2247efe6032f9df1bd434
 	$(PYTHON) setup.py install
 
 dev: all
 	bash install-pplacer.sh
-	pip install pre-commit pip install git+https://github.com/misialq/CheckM.git@29916b666ba8834d0191d631110ffbdf4494cac9
+	pip install pre-commit git+https://github.com/Ecogenomics/CheckM.git@8b42a8ca13dda3a967e2247efe6032f9df1bd434
 	pip install -e .
 	pre-commit install
 
