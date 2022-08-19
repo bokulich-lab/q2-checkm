@@ -5,8 +5,10 @@
 
 QIIME 2 plugin for assessing the quality of (meta)genomes using CheckM.
 
-Notes on CheckM compatibility:
+Notes on CheckM version:
 CheckM version currently used by q2-checkm is pinned to a specific commit:
-https://github.com/misialq/CheckM.git@29916b666ba8834d0191d631110ffbdf4494cac9.
-This is required to make it compatible with the most recent QIIME 2 version
-which uses Python 3.8.
+https://github.com/Ecogenomics/CheckM.git@8b42a8ca13dda3a967e2247efe6032f9df1bd434.
+We are not using the corresponding version available through conda, as it has _pplacer_
+as a pinned dependency (and this dependency cannot be resolved on some systems).
+Instead, we are manually taking care of checkm's dependencies and just installing
+it through pip.
