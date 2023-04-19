@@ -280,7 +280,7 @@ def evaluate_bins(
         plots_per_sample = _get_plots_per_sample(all_plots)
 
         _zip_checkm_plots(
-            plots_per_sample, os.path.join(TEMPLATES, "checkm", "checkm_plots.zip")
+            plots_per_sample, os.path.join(output_dir, "checkm_plots.zip")
         )
 
         # TODO: calculate bin coverage and add one more plot
@@ -289,7 +289,7 @@ def evaluate_bins(
         # convert CheckM reports into a DataFrame and add completeness info
         checkm_results = _parse_checkm_reports(reports)
         checkm_results.to_csv(
-            os.path.join(TEMPLATES, "checkm", "results.tsv"),
+            os.path.join(output_dir, "results.tsv"),
             sep="\t",
             index=False,
         )
