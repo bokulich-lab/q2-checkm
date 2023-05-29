@@ -18,7 +18,7 @@ requirements:
     - python {{ python }}
     - setuptools
   run:
-    - altair
+    - altair <5.0.0
     - dendropy
     - hmmer
     - matplotlib
