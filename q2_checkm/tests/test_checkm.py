@@ -16,7 +16,7 @@ from zipfile import ZipFile
 
 import pandas as pd
 from pandas._testing import assert_frame_equal
-from q2_types_genomics.per_sample_data import MultiMAGSequencesDirFmt
+from q2_types.per_sample_sequences import MultiMAGSequencesDirFmt
 from qiime2.plugin.testing import TestPluginBase
 
 from q2_checkm.checkm import (

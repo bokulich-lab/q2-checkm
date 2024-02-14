@@ -5,8 +5,8 @@
 #
 # The full license is in the file LICENSE, distributed with this software.
 # ----------------------------------------------------------------------------
+from q2_types.per_sample_sequences import MAGs
 from q2_types.sample_data import SampleData
-from q2_types_genomics.per_sample_data import MAGs
 from qiime2.core.type import Bool, Float, Int, Range, Str
 from qiime2.plugin import Citations, Plugin
 
