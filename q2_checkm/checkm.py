@@ -17,7 +17,7 @@ from zipfile import ZipFile
 import pandas as pd
 import pkg_resources
 import q2templates
-from q2_types_genomics.per_sample_data._format import MultiMAGSequencesDirFmt
+from q2_types.per_sample_sequences import MultiMAGSequencesDirFmt
 
 from q2_checkm.plots import _draw_detailed_plots, _draw_overview_plots
 from q2_checkm.utils import (

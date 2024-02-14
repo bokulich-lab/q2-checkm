@@ -20,14 +20,14 @@ requirements:
   run:
     - altair <5.0.0
     - dendropy
-    - hmmer
+    - hmmera
     - matplotlib
     - numpy
     - prodigal
     - pysam
     - python {{ python }}
     - qiime2 {{ qiime2_epoch }}.*
-    - q2-types-genomics {{ qiime2_epoch }}.*
+    - q2-types {{ qiime2_epoch }}.*
     - q2templates {{ qiime2_epoch }}.*
 
 test:
