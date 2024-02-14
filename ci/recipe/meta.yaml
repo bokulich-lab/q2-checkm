@@ -20,7 +20,7 @@ requirements:
   run:
     - altair <5.0.0
     - dendropy
-    - hmmera
+    - hmmer
     - matplotlib
     - numpy
     - prodigal
