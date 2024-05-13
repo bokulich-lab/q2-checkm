@@ -25,7 +25,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install -q pre-commit
+        pip install -q pre-commit https://github.com/qiime2/q2lint/archive/master.zip
         pre-commit install
 
     - name: Lint
