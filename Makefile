@@ -21,11 +21,11 @@ test-docker: all
 install: all
 	bash install-pplacer.sh
 	$(PYTHON) -m pip install -v .
-	$(PYTHON) -m pip install -v git+https://github.com/Ecogenomics/CheckM
+	$(PYTHON) -m pip install -v git+https://github.com/Ecogenomics/CheckM.git@4c11fed446ae7b728031f67b3c0d618ebc0ea39c
 
 dev: all
 	bash install-pplacer.sh
-	$(PYTHON) -m pip install pre-commit git+https://github.com/Ecogenomics/CheckM
+	$(PYTHON) -m pip install pre-commit git+https://github.com/Ecogenomics/CheckM.git@4c11fed446ae7b728031f67b3c0d618ebc0ea39c
 	$(PYTHON) -m pip install -e .
 	pre-commit install
 
