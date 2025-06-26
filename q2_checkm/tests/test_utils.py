@@ -7,7 +7,7 @@
 # ----------------------------------------------------------------------------
 import subprocess
 import unittest
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 
 from qiime2.plugin.testing import TestPluginBase
 
