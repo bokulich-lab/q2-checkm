@@ -20,13 +20,13 @@ test-docker: all
 
 install: all
 	bash install-pplacer.sh
-	pip install checkm-genome
+	$(PYTHON) -m pip install checkm-genome
 	$(PYTHON) -m pip install -v .
 
 dev: all
 	bash install-pplacer.sh
-	pip install pre-commit checkm-genome
-	pip install -e .
+	$(PYTHON) -m pip install pre-commit checkm-genome
+	$(PYTHON) -m pip install -e .
 	pre-commit install
 
 clean: distclean
