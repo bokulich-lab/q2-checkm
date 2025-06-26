@@ -20,8 +20,8 @@ test-docker: all
 
 install: all
 	bash install-pplacer.sh
-# 	$(PYTHON) -m pip install -v checkm-genome
 	$(PYTHON) -m pip install -v .
+	$(PYTHON) -m pip install -v checkm-genome
 
 dev: all
 	bash install-pplacer.sh
