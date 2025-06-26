@@ -23,7 +23,7 @@ RUN apt-get install -y --no-install-recommends wget procps \
 RUN conda update -qy conda \
     && conda install -c conda-forge -qy mamba \
     && mamba env create -n ${PLUGIN_NAME} --file environment.yml \
-    && mamba run -n ${PLUGIN_NAME} sh install-pplacer.sh \
+    && mamba run -n ${PLUGIN_NAME} bash install-pplacer.sh \
     && mamba run -n ${PLUGIN_NAME} pip install checkm-genome \
     && mamba clean --all --yes \
     && chmod -R a+rwx /opt/conda
