@@ -15,7 +15,8 @@ WORKDIR /home/qiime2
 COPY environment.yml .
 COPY install-pplacer.sh .
 
-RUN apt-get install -y --no-install-recommends wget procps unzip \
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends wget procps unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && chmod +x install-pplacer.sh
