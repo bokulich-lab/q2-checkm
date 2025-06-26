@@ -1,4 +1,4 @@
-.PHONY: all lint test test-cov install dev prep-dev-container clean distclean
+.PHONY: all lint test test-cov test-docker install dev prep-dev-container clean distclean
 
 PYTHON ?= python
 
@@ -12,8 +12,11 @@ test: all
 	py.test
 
 test-cov: all
-	coverage run -m pytest
-	coverage xml
+	python -m pytest --cov=q2_checkm -n 4 && coverage xml -o coverage.xml
+
+test-docker: all
+	qiime info
+	qiime checkm --help
 
 install: all
 	bash install-pplacer.sh
