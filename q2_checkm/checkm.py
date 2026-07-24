@@ -11,11 +11,11 @@ import os
 import tempfile
 from copy import deepcopy
 from distutils.dir_util import copy_tree
+from importlib import resources
 from typing import Mapping
 from zipfile import ZipFile
 
 import pandas as pd
-import pkg_resources
 import q2templates
 from q2_types.per_sample_sequences import MultiMAGSequencesDirFmt
 
@@ -27,7 +27,7 @@ from q2_checkm.utils import (
     run_command,
 )
 
-TEMPLATES = pkg_resources.resource_filename("q2_checkm", "assets")
+TEMPLATES = resources.files("q2_checkm") / "assets"
 
 
 def _evaluate_bins(
